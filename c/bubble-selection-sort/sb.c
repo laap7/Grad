@@ -1,5 +1,5 @@
 #include <stdio.h>      //scanf, printf
-#include <string.h>     //strcmp
+#include <string.h>     //strcmp,
 #include <stdlib.h>     //exit,malloc,free
 
 int readtype(){
