@@ -7,7 +7,7 @@ maxiter = 30
 ctn = (str(input('Escrever novos resultados? y/n :')))
 while (ctn == 'y'):
 
-    # Abre e escreve o cabecalho no arquivo de texto de forma tabulada
+    # Abre e escreve o cabecalho no arquivo de texto na forma tabulada
     f = open('secantes_output1.txt', 'w')
     f.write("{:<25}{:<25}{:<25}{:<25}\n".format("Iteracao k", "xk", "f(xk)","ek"))
 
