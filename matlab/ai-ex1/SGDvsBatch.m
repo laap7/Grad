@@ -1,10 +1,10 @@
-% ComparaÁ„o do erro quadr·tico medio de ambos os metodos: GDE vs Batch.
-% Para comparaÁ„o justa ambos os pesos s„o incializados com o mesmo valor
+% Compara√ß√£o do erro quadr√°tico medio de ambos os metodos: GDE vs Batch.
+% Para compara√ß√£o justa ambos os pesos s√£o incializados com o mesmo valor
 
 clear all
 clc
 
-% Entradas em forma de matrizes 1x7 para cada um dos dÌgitos possÌveis
+% Entradas em forma de matrizes 1x7 para cada um dos d√≠gitos poss√≠veis
 X = [1 1 1 1 1 1 0;
      0 1 1 0 0 0 0;
      1 1 0 1 1 1 1;
@@ -16,7 +16,7 @@ X = [1 1 1 1 1 1 0;
      1 1 1 1 1 1 1;
      1 1 1 1 0 1 1];
  
-% SaÌdas desejadas, nÌvel alto apenas para o dÌgito 0
+% Sa√≠das desejadas, n√≠vel alto apenas para o d√≠gito 0
 D = [0; 0; 0; 0; 0; 0; 0; 0; 1; 0];
 
 E1 = zeros(1000, 1);
@@ -25,7 +25,7 @@ E2 = zeros(1000, 1);
 W1 = 2*rand(1, 7) - 1;
 W2 = W1;
 
-for epoch = 1:1000              % Treinamento - 1000 interaÁıes
+for epoch = 1:1000              % Treinamento - 1000 intera√ß√µes
     W1 = DeltaSGD(W1, X, D);
     W2 = DeltaBatch(W2, X, D);
     es1 = 0;
@@ -49,6 +49,6 @@ end
 plot(E1, 'r', 'LineWidth', 3.0)
 hold on
 plot(E2, 'b:', 'LineWidth', 3.0)
-xlabel('IteraÁıes')
-ylabel('MÈdia Quadr·tica dos Erros de Treinamento')
+xlabel('Itera√ß√µes')
+ylabel('M√©dia Quadr√°tica dos Erros de Treinamento')
 legend('GDE', 'Batch')
