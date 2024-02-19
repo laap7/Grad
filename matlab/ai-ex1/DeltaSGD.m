@@ -5,17 +5,17 @@ function W = DeltaSGD(W, X, D)
     N = 10;
     for k = 1:N
         x = X(k, :)';   % Entradas
-        d = D(k);       % Saídas desejadas
+        d = D(k);       % SaÃ­das desejadas
         
         v = W*x;
-        y = Sigmoid(v); % Saídas obtidas
+        y = Sigmoid(v); % SaÃ­das obtidas
         
         e = d - y;
         delta = y*(1-y)*e;
         
         dW = alpha*delta*x; % Regra delta
         
-% Atualização para cada um dos 7 pesos
+% AtualizaÃ§Ã£o para cada um dos 7 pesos
         W(1) = W(1) + dW(1);
         W(2) = W(2) + dW(2);
         W(3) = W(3) + dW(3);
