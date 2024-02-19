@@ -1,9 +1,9 @@
-% Treinamento para o dígito 0 utilizando o método Batch
+% Treinamento para o dÃ­gito 0 utilizando o mÃ©todo Batch
 
 clear all
 clc
 
-% Entradas em forma de matrizes 1x7 para cada um dos dígitos possíveis
+% Entradas em forma de matrizes 1x7 para cada um dos dÃ­gitos possÃ­veis
 X = [1 1 1 1 1 1 0;
      0 1 1 0 0 0 0;
      1 1 0 1 1 1 1;
@@ -15,10 +15,10 @@ X = [1 1 1 1 1 1 0;
      1 1 1 1 1 1 1;
      1 1 1 1 0 1 1];
 
-% Saídas desejadas, nível alto apenas para o dígito 0
+% SaÃ­das desejadas, nÃ­vel alto apenas para o dÃ­gito 0
 D = [0; 0; 0; 0; 0; 0; 0; 0; 0; 1];
 
-W = 2*rand(1, 7) - 1;   % Inicialização dos sete pesos
+W = 2*rand(1, 7) - 1;   % InicializaÃ§Ã£o dos sete pesos
 
 % Treinamento (ajuste de pesos):
 for epoch = 1:40000
@@ -31,7 +31,7 @@ y = zeros(N,1);
 for k = 1:N
     x = X(k, :)';
     v = W*x;
-    y(k) = Sigmoid(v);  % Saída obtida
+    y(k) = Sigmoid(v);  % SaÃ­da obtida
 end
 
 disp('Results:');
